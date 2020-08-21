@@ -66,8 +66,8 @@ echo ""
 sleep 5
 
 echo "Now the fun part begins..."
-echo "Install some tools... AKA wireshark proxychains tor and macchanger"
-sudo apt install wireshark proxychains macchanger tor
+echo "Install some tools... AKA wireshark, proxychains, tor, nmap, and macchanger"
+sudo apt install wireshark proxychains macchanger tor nmap
 echo "Now that we installed proxychains we can configure the traffic in /etc/proxychains.conf"
 echo "Macchanger can be used like the help meu show below"
 macchanger -h
@@ -80,5 +80,11 @@ sleep 10
 echo "Now see if tor is running with 'sudo systemctl status tor@default.service' command"
 sudo systemctl status tor@default.service
 echo
+echo "Now lets install ruby language for wpscan"
+sudo apt install ruby ruby-dev bundler
+sudo apt install rubygems
+sudo gem install wpscan
+echo "Wpscan end installing..."
+
 
 echo "Installation ends here... You may want to check errors.txt?"
