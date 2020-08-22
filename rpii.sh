@@ -79,12 +79,31 @@ echo "A very simple configuration will expose Tor Socks proxy service on tor def
 sleep 10
 echo "Now see if tor is running with 'sudo systemctl status tor@default.service' command"
 sudo systemctl status tor@default.service
+echo "Moving on..."
 echo
-echo "Now lets install ruby language for wpscan"
+
+echo "Now lets install ruby language and wpscan"
 sudo apt install ruby ruby-dev bundler
 sudo apt install rubygems
 sudo gem install wpscan
 echo "Wpscan end installing..."
+echo
+
+echo "Now time for the metasploit framework"
+echo "Nightly installer from github actually used here"
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+sudo chmod 755 msfinstall && \
+./msfinstall
+echo "Ok... Done!!!"
+sleep 2
+echo
+
+echo "Now installed lets go for Shelock, user recon tool"
+git clone https://github.com/sherlock-project/sherlock.git && cd sherlock
+echo "We even got into the sherlock folder so lets start installing styff, requirements...."
+python3 -m pip install -r requirements.txt
+echo "Done!!!"
+echo "Now lets go on with our lives"
 
 
 echo "Installation ends here... You may want to check errors.txt?"
