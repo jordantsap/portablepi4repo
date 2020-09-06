@@ -103,7 +103,51 @@ git clone https://github.com/sherlock-project/sherlock.git && cd sherlock
 echo "We even got into the sherlock folder so lets start installing styff, requirements...."
 python3 -m pip install -r requirements.txt
 echo "Done!!!"
-echo "Now lets go on with our lives"
 
+echo "Now let\'s download evillimiter from github!!!"
+sleep 1
+git clone https://github.com/bitbrute/evillimiter.git && cd evillimiter
+echo "Continue with the installation of the tool"
+sudo python3 setup.py install
+echo "Now installed, see the help menu of the tool for a while, you must use sudo"
+sudo evillimiter -h
+sleep 5
+echo "The show must go on... Let\'s do that"
 
+echo "Now time for The Social-Engineer Toolkit (SET)"
+git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/ && cd setoolkit
+pip3 install -r requirements.txt python setup.py
+sleep 2
+echo "That done also"
+
+echo "Now hydra"
+echo "Hydra is a tool to guess/crack valid login/password pairs. Licensed under AGPL"
+sleep 4
+sudo apt install hydra
+echo "The hydra help/options menu"
+sleep 4
+
+echo "Now let\'s install Empire framework for post-exploitation with pure-PowerShell2.0 Windows agent."
+echo "Working on linux and unix systems"
+git clone https://github.com/EmpireProject/Empire.git
+echo "Now that Empire framework it\'s downloaded go to it\'s folder" && cd Empire
+echo "The installation file is in the setup directory so let\'s install it without going to that folder"
+echo "This script installs the few dependencies and run the ./setup/setup_database.py script."
+sleep 1
+echo "The setup_database.py file contains various setting that you can manually modify, and then initializes the ./data/empire.db backend database."
+sleep 2
+echo "No additional configuration should be needed- hopefully everything works out of the box."
+sleep 2
+echo -e '\e]8;;https://github.com/EmpireProject/Empire/wiki/Quickstart\e\\Control+click for Empire documentation\e]8;;\e\\\n'
+sleep 2
+echo "Running ./setup/install.sh"
+./setup/install.sh
+echo "Now it\'s time to go on"
+
+echo "It is time to install Aircrack suite"
+echo "But first, update the system, it\'s been a while"
+sudo apt-get update && sudo apt-get install -y aircrack-ng
+echo "Suite installed"
+
+echo "---------------------------------------------------"
 echo "Installation ends here... You may want to check errors.txt?"
