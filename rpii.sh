@@ -39,9 +39,9 @@ echo "Configure dpkg package to ensure that it will work later on..."
 sudo dpkg --configure -a && echo "And...go..."
 echo ""
 
-echo "Apt Install Putty, Terminator, Filezilla, Timeshift..."
+echo "Apt Install Putty, hardinfo, Terminator, Filezilla, Timeshift..."
 sleep 2
-sudo apt install -y putty filezilla timeshift terminator && echo "Telegram, Putty, Filezilla, Timeshift, installed..."|| echo $error 2> errors.txt
+sudo apt install -y hardinfo putty filezilla timeshift terminator && echo "Telegram, Putty, Filezilla, Timeshift, installed..."|| echo $error 2> errors.txt
 echo ""
 
 echo "Running sudo apt autoremove again..."

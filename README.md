@@ -8,6 +8,7 @@ Filezilla
 Timeshift  
 Terminator  
 Filelight  
+Hardinfo  
 Malware Detection Software  
 Wireshark  
 Proxychains  
