@@ -27,6 +27,14 @@ Social-Engineer Toolkit
 Hydra  
 Empire  
 Aircrack-ng  
+Kismet  
+Pyrit  
+Reaver  
+Dnsmasq  
+Wifiphisher  
+Wifite  
+
+
 
 
 Coming sooon cewl, mentalist, wordlister, more, more, more....

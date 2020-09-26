@@ -144,10 +144,19 @@ echo "Running ./setup/install.sh"
 ./setup/install.sh
 echo "Now it\'s time to go on"
 
-echo "It is time to install Aircrack suite"
+echo "It is time to install Aircrack suite, Kismet, Reaver, Cowpatty, Dnsmasq, Wifite"
 echo "But first, update the system, it\'s been a while"
-sudo apt-get update && sudo apt-get install -y aircrack-ng
+sudo apt-get update && sudo apt-get install -y aircrack-ng kismet pyrit reaver cowpatty dnsmasq wifite
 echo "Suite installed"
+
+echo "Next lets install wifiphisher"
+echo "Download the latest revision and cd into it"
+echo "First the dependency"
+git clone https://github.com/wifiphisher/wifiphisher.git && cd wifiphisher
+echo "# Install any dependencies"
+sudo python3 setup.py install 
+echo "Done!!!"
+
 
 echo "---------------------------------------------------"
 echo "Installation ends here... You may want to check errors.txt?"
