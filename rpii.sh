@@ -144,9 +144,9 @@ echo "Running ./setup/install.sh"
 ./setup/install.sh
 echo "Now it\'s time to go on"
 
-echo "It is time to install Aircrack suite, Kismet, Reaver, Cowpatty, Dnsmasq, Wifite"
+echo "It is time to install Aircrack suite, Kismet, Reaver, Cowpatty, Dnsmasq, Wifite, Cewl"
 echo "But first, update the system, it\'s been a while"
-sudo apt-get update && sudo apt-get install -y aircrack-ng kismet pyrit reaver cowpatty dnsmasq wifite
+sudo apt-get update && sudo apt-get install -y aircrack-ng kismet pyrit reaver cowpatty dnsmasq wifite cewl
 echo "Suite installed"
 
 echo "Next lets install wifiphisher"
